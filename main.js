@@ -7,36 +7,21 @@ const url = require('url')
 let win
 
 function createWindow () {
-    const WEB_FOLDER = 'src';
-    const PROTOCOL = 'file';
-    // protocol.interceptFileProtocol(PROTOCOL, (request, callback) => {
-    //     // // Strip protocol
-    //     let url = request.url.substr(PROTOCOL.length + 1);
-
-    //     // Build complete path for node require function
-    //     url = path.join(__dirname, WEB_FOLDER, url);
-
-    //     // Replace backslashes by forward slashes (windows)
-    //     // url = url.replace(/\\/g, '/');
-    //     url = path.normalize(url);
-
-    //     console.log(url);
-    //     callback({path: url});
-    // });
 
     protocol.registerFileProtocol('local', (request, callback) => {
-        const url = request.url.substr(7)
+        const url = request.url.substr(8)
         callback({path: path.normalize(`${__dirname}/${url}`)})
       }, (error) => {
         if (error) console.error('Failed to register protocol')
       })
+
     // Create the browser window.
     win = new BrowserWindow({width: 800, height: 600})
 
     // and load the index.html of the app.
     win.loadURL(url.format({
-        pathname: path.join(__dirname, WEB_FOLDER + '/index.html'),
-        protocol: PROTOCOL + ':',
+        pathname: path.join(__dirname, 'src/index.html'),
+        protocol: 'file:',
         slashes: true
     }))
 
