@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
   onMaximize() {
     if (!this.window.isMaximized()) {
-      this.window.maximize();
+        this.window.maximize();
     } else {
         this.window.unmaximize();
     }

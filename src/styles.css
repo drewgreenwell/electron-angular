@@ -59,7 +59,10 @@ app-root > .content {
 }
 
 
-/* begin background animation */
+/* 
+   Background animation 
+   https://codepen.io/asfarmed/pen/cfslr?page=1&
+*/
 body{
     background: #2980b9 url('/assets/img/bg-gray.png') repeat 0 0;
 	-webkit-animation: 15s linear 0s normal none infinite animate;
