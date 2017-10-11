@@ -44,7 +44,7 @@ title-bar .window-btn {
     -webkit-app-region: no-drag;
     background: none;
     border: none;
-    transition: background-color .3s;
+    transition: background-color .1s;
 }
 
 title-bar .window-btn:active,
@@ -61,10 +61,6 @@ app-root > .content {
 
 /* begin background animation */
 body{
-	margin:0;
-	padding:0;
-	font-family:"arial",heletica,sans-serif;
-	font-size:12px;
     background: #2980b9 url('/assets/img/bg-gray.png') repeat 0 0;
 	-webkit-animation: 15s linear 0s normal none infinite animate;
 	-moz-animation: 15s linear 0s normal none infinite animate;
