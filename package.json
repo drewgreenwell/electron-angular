@@ -9,6 +9,7 @@
     "build": "ng build",
     "build:aot": "./node_modules/.bin/ngc -p tsconfig-aot.json && rollup -c rollup-config.js",
     "electron": "electron .",
+    "update": "npm run build:aot && npm run electron",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"    
