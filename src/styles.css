@@ -53,11 +53,11 @@ body{
 	font-family:"arial",heletica,sans-serif;
 	font-size:12px;
     background: #2980b9 url('/assets/img/bg-gray.png') repeat 0 0;
-	-webkit-animation: 10s linear 0s normal none infinite animate;
-	-moz-animation: 10s linear 0s normal none infinite animate;
-	-ms-animation: 10s linear 0s normal none infinite animate;
-	-o-animation: 10s linear 0s normal none infinite animate;
-	animation: 10s linear 0s normal none infinite animate;
+	-webkit-animation: 15s linear 0s normal none infinite animate;
+	-moz-animation: 15s linear 0s normal none infinite animate;
+	-ms-animation: 15s linear 0s normal none infinite animate;
+	-o-animation: 15s linear 0s normal none infinite animate;
+	animation: 15s linear 0s normal none infinite animate;
  
 }
  
