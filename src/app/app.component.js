@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component, ViewChild } from '@angular/core';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { ElectronService } from './services/electron.service';
-var remote = require('electron').remote;
 var AppComponent = /** @class */ (function () {
     function AppComponent(electronService) {
         this.title = 'Angular App in Electron';

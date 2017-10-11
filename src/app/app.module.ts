@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { ElectronInfoComponent } from './electron-info/electron-info.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 import { ElectronService } from './services/electron.service';
 
@@ -11,10 +14,13 @@ import { ElectronService } from './services/electron.service';
   declarations: [
     AppComponent,
     TitleBarComponent,
-    ElectronInfoComponent
+    ElectronInfoComponent,
+    DashboardComponent,
+    WelcomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     ElectronService
