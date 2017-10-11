@@ -1,7 +1,6 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { TitleBarComponent } from './title-bar/title-bar.component';
-
-const remote = require('electron').remote;
+import { ElectronService } from './services/electron.service';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +12,12 @@ export class AppComponent implements OnInit {
   @ViewChild('titleBar') titleBar: TitleBarComponent;
 
   title = 'Angular App in Electron';
-  window = remote.getCurrentWindow();
+  window: any;
 
-  constructor() {}
+  constructor(electronService: ElectronService) {
+    const electron = electronService.getElectron();
+    this.window = electron.remote.getCurrentWindow();
+  }
 
   ngOnInit() {}
 

@@ -7,22 +7,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
-import { ElectronService } from '../services/electron.service';
-var ElectronInfoComponent = /** @class */ (function () {
-    function ElectronInfoComponent(electronService) {
-        var electron = electronService.getElectron();
-        this.process = electron.remote.process;
+import { Injectable } from '@angular/core';
+var ElectronService = /** @class */ (function () {
+    function ElectronService() {
+        this.electron = null;
     }
-    ElectronInfoComponent = __decorate([
-        Component({
-            selector: 'electron-info',
-            templateUrl: './electron-info.component.html',
-            styleUrls: ['./electron-info.component.css']
-        }),
-        __metadata("design:paramtypes", [ElectronService])
-    ], ElectronInfoComponent);
-    return ElectronInfoComponent;
+    ElectronService.prototype.getElectron = function () {
+        if (this.electron === null) {
+            this.electron = require('electron');
+        }
+        return this.electron;
+    };
+    ElectronService = __decorate([
+        Injectable(),
+        __metadata("design:paramtypes", [])
+    ], ElectronService);
+    return ElectronService;
 }());
-export { ElectronInfoComponent };
-//# sourceMappingURL=electron-info.component.js.map
+export { ElectronService };
+//# sourceMappingURL=electron.service.js.map

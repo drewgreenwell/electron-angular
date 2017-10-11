@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 var remote = require('electron').remote;
-var TitleBarComponent = (function () {
+var TitleBarComponent = /** @class */ (function () {
     function TitleBarComponent() {
         this.onMaximize = new EventEmitter();
         this.onMinimize = new EventEmitter();
@@ -24,34 +24,34 @@ var TitleBarComponent = (function () {
     TitleBarComponent.prototype.close = function ($event) {
         this.onClose.emit();
     };
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], TitleBarComponent.prototype, "title", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], TitleBarComponent.prototype, "logo", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], TitleBarComponent.prototype, "onMaximize", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], TitleBarComponent.prototype, "onMinimize", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], TitleBarComponent.prototype, "onClose", void 0);
+    TitleBarComponent = __decorate([
+        Component({
+            selector: 'title-bar',
+            templateUrl: './title-bar.component.html',
+            styleUrls: ['./title-bar.component.css']
+        })
+    ], TitleBarComponent);
     return TitleBarComponent;
 }());
-__decorate([
-    Input(),
-    __metadata("design:type", String)
-], TitleBarComponent.prototype, "title", void 0);
-__decorate([
-    Input(),
-    __metadata("design:type", String)
-], TitleBarComponent.prototype, "logo", void 0);
-__decorate([
-    Output(),
-    __metadata("design:type", Object)
-], TitleBarComponent.prototype, "onMaximize", void 0);
-__decorate([
-    Output(),
-    __metadata("design:type", Object)
-], TitleBarComponent.prototype, "onMinimize", void 0);
-__decorate([
-    Output(),
-    __metadata("design:type", Object)
-], TitleBarComponent.prototype, "onClose", void 0);
-TitleBarComponent = __decorate([
-    Component({
-        selector: 'title-bar',
-        templateUrl: './title-bar.component.html',
-        styleUrls: ['./title-bar.component.css']
-    })
-], TitleBarComponent);
 export { TitleBarComponent };
 //# sourceMappingURL=title-bar.component.js.map

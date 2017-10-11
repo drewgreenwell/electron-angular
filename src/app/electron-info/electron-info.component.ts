@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-const remote = require('electron').remote;
+import { ElectronService } from '../services/electron.service';
 
 @Component({
   selector: 'electron-info',
@@ -7,5 +7,10 @@ const remote = require('electron').remote;
   styleUrls: ['./electron-info.component.css']
 })
 export class ElectronInfoComponent {
-    process = remote.process;
+    process: any;
+
+    constructor(electronService: ElectronService) {
+      const electron = electronService.getElectron();
+      this.process = electron.remote.process;
+    }
 }

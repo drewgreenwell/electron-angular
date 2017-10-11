@@ -9,24 +9,27 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { ElectronInfoComponent } from './electron-info/electron-info.component';
-var AppModule = (function () {
+import { ElectronService } from './services/electron.service';
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        NgModule({
+            declarations: [
+                AppComponent,
+                TitleBarComponent,
+                ElectronInfoComponent
+            ],
+            imports: [
+                BrowserModule
+            ],
+            providers: [
+                ElectronService
+            ],
+            bootstrap: [AppComponent]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    NgModule({
-        declarations: [
-            AppComponent,
-            TitleBarComponent,
-            ElectronInfoComponent
-        ],
-        imports: [
-            BrowserModule
-        ],
-        providers: [],
-        bootstrap: [AppComponent]
-    })
-], AppModule);
 export { AppModule };
 //# sourceMappingURL=app.module.js.map

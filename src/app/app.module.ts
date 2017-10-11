@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { ElectronInfoComponent } from './electron-info/electron-info.component';
 
+import { ElectronService } from './services/electron.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,9 @@ import { ElectronInfoComponent } from './electron-info/electron-info.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ElectronService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

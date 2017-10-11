@@ -9,11 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, ViewChild } from '@angular/core';
 import { TitleBarComponent } from './title-bar/title-bar.component';
+import { ElectronService } from './services/electron.service';
 var remote = require('electron').remote;
-var AppComponent = (function () {
-    function AppComponent() {
+var AppComponent = /** @class */ (function () {
+    function AppComponent(electronService) {
         this.title = 'Angular App in Electron';
-        this.window = remote.getCurrentWindow();
+        var electron = electronService.getElectron();
+        this.window = electron.remote.getCurrentWindow();
     }
     AppComponent.prototype.ngOnInit = function () { };
     AppComponent.prototype.onMaximize = function () {
@@ -30,19 +32,19 @@ var AppComponent = (function () {
     AppComponent.prototype.onClose = function () {
         this.window.close();
     };
+    __decorate([
+        ViewChild('titleBar'),
+        __metadata("design:type", TitleBarComponent)
+    ], AppComponent.prototype, "titleBar", void 0);
+    AppComponent = __decorate([
+        Component({
+            selector: 'app-root',
+            templateUrl: './app.component.html',
+            styleUrls: ['./app.component.css']
+        }),
+        __metadata("design:paramtypes", [ElectronService])
+    ], AppComponent);
     return AppComponent;
 }());
-__decorate([
-    ViewChild('titleBar'),
-    __metadata("design:type", TitleBarComponent)
-], AppComponent.prototype, "titleBar", void 0);
-AppComponent = __decorate([
-    Component({
-        selector: 'app-root',
-        templateUrl: './app.component.html',
-        styleUrls: ['./app.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
 export { AppComponent };
 //# sourceMappingURL=app.component.js.map
