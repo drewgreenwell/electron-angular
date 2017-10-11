@@ -9,6 +9,8 @@ import * as i1 from '@angular/core';
 import * as i2 from '../../../src/app/app.component';
 import * as i3 from './title-bar/title-bar.component.ngfactory';
 import * as i4 from '../../../src/app/title-bar/title-bar.component';
+import * as i5 from './electron-info/electron-info.component.ngfactory';
+import * as i6 from '../../../src/app/electron-info/electron-info.component';
 var styles_AppComponent = [i0.styles];
 export var RenderType_AppComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_AppComponent,
     data: {} });
@@ -31,10 +33,10 @@ export function View_AppComponent_0(_l) {
             }
             return ad;
         }, i3.View_TitleBarComponent_0, i3.RenderType_TitleBarComponent)), i1.ɵdid(49152, [[1, 4], ['titleBar', 4]], 0, i4.TitleBarComponent, [], { title: [0, 'title'] }, { onMaximize: 'onMaximize', onMinimize: 'onMinimize', onClose: 'onClose' }), (_l()(),
-            i1.ɵted(null, ['\n'])), (_l()(), i1.ɵeld(0, null, null, 44, 'div', [['class', 'content']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵeld(0, null, null, 1, 'p', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['We are using node ',
-            ',\n    Chrome ', ',\n    and Electron ', '.'])), (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵeld(0, null, null, 6, 'div', [['style', 'text-align:center']], null, null, null, null, null)), (_l()(),
-            i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n      Welcome to ', '!\n    '])),
-        (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 0, 'img', [['src', 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=='],
+            i1.ɵted(null, ['\n\n'])), (_l()(), i1.ɵeld(0, null, null, 44, 'div', [['class', 'content']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵeld(0, null, null, 1, 'electron-info', [], null, null, null, i5.View_ElectronInfoComponent_0, i5.RenderType_ElectronInfoComponent)), i1.ɵdid(49152, null, 0, i6.ElectronInfoComponent, [], null, null),
+        (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵeld(0, null, null, 6, 'div', [['style', 'text-align:center']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n    '])),
+        (_l()(), i1.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n      Welcome to ', '!\n    '])), (_l()(), i1.ɵted(null, ['\n    '])),
+        (_l()(), i1.ɵeld(0, null, null, 0, 'img', [['src', 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=='],
             ['width', '300']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵeld(0, null, null, 1, 'h2', [], null, null, null, null, null)),
         (_l()(), i1.ɵted(null, ['Here are some links to help you start: '])),
         (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵeld(0, null, null, 3, 'form', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n    '])), (_l()(), i1.ɵeld(0, null, null, 0, 'input', [['type', 'text']], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵted(null, ['\n  '])), (_l()(), i1.ɵeld(0, null, null, 22, 'ul', [], null, null, null, null, null)), (_l()(), i1.ɵted(null, ['\n    '])),
@@ -56,12 +58,8 @@ export function View_AppComponent_0(_l) {
         _ck(_v, 2, 0, currVal_0);
     }, function (_ck, _v) {
         var _co = _v.component;
-        var currVal_1 = _co.process.versions.node;
-        var currVal_2 = _co.process.versions.chrome;
-        var currVal_3 = _co.process.versions.electron;
-        _ck(_v, 7, 0, currVal_1, currVal_2, currVal_3);
-        var currVal_4 = _co.title;
-        _ck(_v, 12, 0, currVal_4);
+        var currVal_1 = _co.title;
+        _ck(_v, 12, 0, currVal_1);
     });
 }
 export function View_AppComponent_Host_0(_l) {

@@ -13,7 +13,6 @@ var remote = require('electron').remote;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Angular App in Electron';
-        this.process = remote.process;
         this.window = remote.getCurrentWindow();
     }
     AppComponent.prototype.ngOnInit = function () { };

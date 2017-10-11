@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
+import { ElectronInfoComponent } from './electron-info/electron-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitleBarComponent
+    TitleBarComponent,
+    ElectronInfoComponent
   ],
   imports: [
     BrowserModule

@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
   @ViewChild('titleBar') titleBar: TitleBarComponent;
 
   title = 'Angular App in Electron';
-  process = remote.process;
   window = remote.getCurrentWindow();
 
   constructor() {}

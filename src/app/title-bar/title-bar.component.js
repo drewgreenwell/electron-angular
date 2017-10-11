@@ -31,6 +31,10 @@ __decorate([
     __metadata("design:type", String)
 ], TitleBarComponent.prototype, "title", void 0);
 __decorate([
+    Input(),
+    __metadata("design:type", String)
+], TitleBarComponent.prototype, "logo", void 0);
+__decorate([
     Output(),
     __metadata("design:type", Object)
 ], TitleBarComponent.prototype, "onMaximize", void 0);

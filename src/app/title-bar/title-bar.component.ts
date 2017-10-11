@@ -8,6 +8,7 @@ const remote = require('electron').remote;
 })
 export class TitleBarComponent {
     @Input() title: string;
+    @Input() logo: string;
     @Output() onMaximize = new EventEmitter();
     @Output() onMinimize = new EventEmitter();
     @Output() onClose = new EventEmitter();

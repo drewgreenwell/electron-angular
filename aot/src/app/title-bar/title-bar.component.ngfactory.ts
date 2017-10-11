@@ -8,21 +8,36 @@
 
 import * as i0 from './title-bar.component.css.shim.ngstyle';
 import * as i1 from '@angular/core';
-import * as i2 from '../../../../src/app/title-bar/title-bar.component';
+import * as i2 from '@angular/common';
+import * as i3 from '../../../../src/app/title-bar/title-bar.component';
 const styles_TitleBarComponent:any[] = [i0.styles];
 export const RenderType_TitleBarComponent:i1.RendererType2 = i1.ɵcrt({encapsulation:0,
     styles:styles_TitleBarComponent,data:{}});
-export function View_TitleBarComponent_0(_l:any):i1.ɵViewDefinition {
+function View_TitleBarComponent_1(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'div',[['class',
-      'window-title']],(null as any),(null as any),(null as any),(null as any),(null as any))),
-      (_l()(),i1.ɵted((null as any),['',''])),(_l()(),i1.ɵted((null as any),['\n'])),
-      (_l()(),i1.ɵeld(0,(null as any),(null as any),10,'div',[['class','window-controls']],
+      'window-logo']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i1.ɵeld(0,(null as any),(null as any),0,'img',[['alt','logo']],[[8,'src',
+          4]],(null as any),(null as any),(null as any),(null as any)))],(null as any),
+      (_ck,_v) => {
+        var _co:any = _v.component;
+        const currVal_0:any = i1.ɵinlineInterpolate(1,'',_co.logo,'');
+        _ck(_v,1,0,currVal_0);
+      });
+}
+export function View_TitleBarComponent_0(_l:any):i1.ɵViewDefinition {
+  return i1.ɵvid(0,[(_l()(),i1.ɵand(16777216,(null as any),(null as any),1,(null as any),
+      View_TitleBarComponent_1)),i1.ɵdid(16384,(null as any),0,i2.NgIf,[i1.ViewContainerRef,
+      i1.TemplateRef],{ngIf:[0,'ngIf']},(null as any)),(_l()(),i1.ɵted((null as any),
+      ['\n'])),(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'div',[['class','window-title']],
+      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
+      i1.ɵted((null as any),['',''])),(_l()(),i1.ɵted((null as any),['\n'])),(_l()(),
+      i1.ɵeld(0,(null as any),(null as any),10,'div',[['class','window-controls']],
           (null as any),(null as any),(null as any),(null as any),(null as any))),
       (_l()(),i1.ɵted((null as any),['\n  '])),(_l()(),i1.ɵeld(0,(null as any),(null as any),
           1,'button',[['class','window-btn min']],(null as any),[[(null as any),'click']],
           (_v,en,$event) => {
             var ad:boolean = true;
-            var _co:i2.TitleBarComponent = _v.component;
+            var _co:i3.TitleBarComponent = _v.component;
             if (('click' === en)) {
               const pd_0:any = ((<any>_co.minimize($event)) !== false);
               ad = (pd_0 && ad);
@@ -33,7 +48,7 @@ export function View_TitleBarComponent_0(_l:any):i1.ɵViewDefinition {
           1,'button',[['class','window-btn max']],(null as any),[[(null as any),'click']],
           (_v,en,$event) => {
             var ad:boolean = true;
-            var _co:i2.TitleBarComponent = _v.component;
+            var _co:i3.TitleBarComponent = _v.component;
             if (('click' === en)) {
               const pd_0:any = ((<any>_co.maximize($event)) !== false);
               ad = (pd_0 && ad);
@@ -44,27 +59,31 @@ export function View_TitleBarComponent_0(_l:any):i1.ɵViewDefinition {
           1,'button',[['class','window-btn close']],(null as any),[[(null as any),
               'click']],(_v,en,$event) => {
             var ad:boolean = true;
-            var _co:i2.TitleBarComponent = _v.component;
+            var _co:i3.TitleBarComponent = _v.component;
             if (('click' === en)) {
               const pd_0:any = ((<any>_co.close($event)) !== false);
               ad = (pd_0 && ad);
             }
             return ad;
           },(null as any),(null as any))),(_l()(),i1.ɵted((null as any),['X'])),(_l()(),
-          i1.ɵted((null as any),['\n'])),(_l()(),i1.ɵted((null as any),['\n']))],(null as any),
-      (_ck,_v) => {
-        var _co:i2.TitleBarComponent = _v.component;
-        const currVal_0:any = _co.title;
-        _ck(_v,1,0,currVal_0);
-      });
+          i1.ɵted((null as any),['\n'])),(_l()(),i1.ɵted((null as any),['\n']))],(_ck,
+      _v) => {
+    var _co:i3.TitleBarComponent = _v.component;
+    const currVal_0:any = _co.logo;
+    _ck(_v,1,0,currVal_0);
+  },(_ck,_v) => {
+    var _co:i3.TitleBarComponent = _v.component;
+    const currVal_1:any = _co.title;
+    _ck(_v,4,0,currVal_1);
+  });
 }
 export function View_TitleBarComponent_Host_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,(null as any),(null as any),1,'title-bar',([] as any[]),
       (null as any),(null as any),(null as any),View_TitleBarComponent_0,RenderType_TitleBarComponent)),
-      i1.ɵdid(49152,(null as any),0,i2.TitleBarComponent,([] as any[]),(null as any),
+      i1.ɵdid(49152,(null as any),0,i3.TitleBarComponent,([] as any[]),(null as any),
           (null as any))],(null as any),(null as any));
 }
-export const TitleBarComponentNgFactory:i1.ComponentFactory<i2.TitleBarComponent> = i1.ɵccf('title-bar',
-    i2.TitleBarComponent,View_TitleBarComponent_Host_0,{title:'title'},{onMaximize:'onMaximize',
-        onMinimize:'onMinimize',onClose:'onClose'},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovUmVwb3MvZWxlY3Ryb24vZWxlY3Ryb24tYW5ndWxhci9lbGVjdHJvbi1hbmd1bGFyL3NyYy9hcHAvdGl0bGUtYmFyL3RpdGxlLWJhci5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovUmVwb3MvZWxlY3Ryb24vZWxlY3Ryb24tYW5ndWxhci9lbGVjdHJvbi1hbmd1bGFyL3NyYy9hcHAvdGl0bGUtYmFyL3RpdGxlLWJhci5jb21wb25lbnQudHMiLCJuZzovLy9DOi9SZXBvcy9lbGVjdHJvbi9lbGVjdHJvbi1hbmd1bGFyL2VsZWN0cm9uLWFuZ3VsYXIvc3JjL2FwcC90aXRsZS1iYXIvdGl0bGUtYmFyLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovUmVwb3MvZWxlY3Ryb24vZWxlY3Ryb24tYW5ndWxhci9lbGVjdHJvbi1hbmd1bGFyL3NyYy9hcHAvdGl0bGUtYmFyL3RpdGxlLWJhci5jb21wb25lbnQudHMuVGl0bGVCYXJDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwid2luZG93LXRpdGxlXCI+e3t0aXRsZX19PC9kaXY+XG48ZGl2IGNsYXNzPVwid2luZG93LWNvbnRyb2xzXCI+XG4gIDxidXR0b24gY2xhc3M9XCJ3aW5kb3ctYnRuIG1pblwiIChjbGljayk9XCJtaW5pbWl6ZSgkZXZlbnQpXCI+JiM5NTs8L2J1dHRvbj5cbiAgPGJ1dHRvbiBjbGFzcz1cIndpbmRvdy1idG4gbWF4XCIgKGNsaWNrKT1cIm1heGltaXplKCRldmVudClcIj4mIzk2NDU7PC9idXR0b24+ICBcbiAgPGJ1dHRvbiBjbGFzcz1cIndpbmRvdy1idG4gY2xvc2VcIiAoY2xpY2spPVwiY2xvc2UoJGV2ZW50KVwiPlg8L2J1dHRvbj5cbjwvZGl2PlxuIiwiPHRpdGxlLWJhcj48L3RpdGxlLWJhcj4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7b0JDQUE7TUFBQTtNQUEwQix3Q0FBZTtNQUN6QztVQUFBO01BQTZCLHlDQUMzQjtVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQStCO2NBQUE7Y0FBQTtZQUFBO1lBQS9CO1VBQUEsZ0NBQTBELHNDQUFjO2lCQUFBLDBCQUN4RTtVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQStCO2NBQUE7Y0FBQTtZQUFBO1lBQS9CO1VBQUEsZ0NBQTBELHNDQUFnQjtpQkFBQSw0QkFDMUU7VUFBQTtjQUFBO1lBQUE7WUFBQTtZQUFpQztjQUFBO2NBQUE7WUFBQTtZQUFqQztVQUFBLGdDQUF5RCxzQ0FBVTtpQkFBQSx3QkFDL0Q7OztRQUxvQjtRQUFBOzs7O29CQ0ExQjtNQUFBO2FBQUE7VUFBQTs7OzsifQ==
+export const TitleBarComponentNgFactory:i1.ComponentFactory<i3.TitleBarComponent> = i1.ɵccf('title-bar',
+    i3.TitleBarComponent,View_TitleBarComponent_Host_0,{title:'title',logo:'logo'},
+    {onMaximize:'onMaximize',onMinimize:'onMinimize',onClose:'onClose'},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovUmVwb3MvZWxlY3Ryb24vZWxlY3Ryb24tYW5ndWxhci9lbGVjdHJvbi1hbmd1bGFyL3NyYy9hcHAvdGl0bGUtYmFyL3RpdGxlLWJhci5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovUmVwb3MvZWxlY3Ryb24vZWxlY3Ryb24tYW5ndWxhci9lbGVjdHJvbi1hbmd1bGFyL3NyYy9hcHAvdGl0bGUtYmFyL3RpdGxlLWJhci5jb21wb25lbnQudHMiLCJuZzovLy9DOi9SZXBvcy9lbGVjdHJvbi9lbGVjdHJvbi1hbmd1bGFyL2VsZWN0cm9uLWFuZ3VsYXIvc3JjL2FwcC90aXRsZS1iYXIvdGl0bGUtYmFyLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vQzovUmVwb3MvZWxlY3Ryb24vZWxlY3Ryb24tYW5ndWxhci9lbGVjdHJvbi1hbmd1bGFyL3NyYy9hcHAvdGl0bGUtYmFyL3RpdGxlLWJhci5jb21wb25lbnQudHMuVGl0bGVCYXJDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwid2luZG93LWxvZ29cIiAqbmdJZj1cImxvZ29cIj48aW1nIHNyYz1cInt7bG9nb319XCIgYWx0PVwibG9nb1wiIC8+PC9kaXY+XG48ZGl2IGNsYXNzPVwid2luZG93LXRpdGxlXCI+e3t0aXRsZX19PC9kaXY+XG48ZGl2IGNsYXNzPVwid2luZG93LWNvbnRyb2xzXCI+XG4gIDxidXR0b24gY2xhc3M9XCJ3aW5kb3ctYnRuIG1pblwiIChjbGljayk9XCJtaW5pbWl6ZSgkZXZlbnQpXCI+JiM5NTs8L2J1dHRvbj5cbiAgPGJ1dHRvbiBjbGFzcz1cIndpbmRvdy1idG4gbWF4XCIgKGNsaWNrKT1cIm1heGltaXplKCRldmVudClcIj4mIzk2NDU7PC9idXR0b24+ICBcbiAgPGJ1dHRvbiBjbGFzcz1cIndpbmRvdy1idG4gY2xvc2VcIiAoY2xpY2spPVwiY2xvc2UoJGV2ZW50KVwiPlg8L2J1dHRvbj5cbjwvZGl2PlxuIiwiPHRpdGxlLWJhcj48L3RpdGxlLWJhcj4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7TUFBc0M7VUFBQTs7O1FBQUs7UUFBTCxXQUFLLFNBQUw7Ozs7b0JBQXRDO01BQUEsa0NBQUE7b0JBQUEsbUNBQTZFO01BQUEsU0FDN0U7TUFBQSx3RUFBMEI7YUFBQSx5QkFBZSx1Q0FDekM7YUFBQTtVQUFBO01BQTZCLHlDQUMzQjtVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQStCO2NBQUE7Y0FBQTtZQUFBO1lBQS9CO1VBQUEsZ0NBQTBELHNDQUFjO2lCQUFBLDBCQUN4RTtVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQStCO2NBQUE7Y0FBQTtZQUFBO1lBQS9CO1VBQUEsZ0NBQTBELHNDQUFnQjtpQkFBQSw0QkFDMUU7VUFBQTtjQUFBO1lBQUE7WUFBQTtZQUFpQztjQUFBO2NBQUE7WUFBQTtZQUFqQztVQUFBLGdDQUF5RCxzQ0FBVTtpQkFBQSx3QkFDL0Q7OztJQU5tQjtJQUF6QixXQUF5QixTQUF6Qjs7O0lBQzBCO0lBQUE7Ozs7b0JDRDFCO01BQUE7YUFBQTtVQUFBOzs7OyJ9

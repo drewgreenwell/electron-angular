@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 html, body {
-    color: #fff;
-    font: caption;
-    padding: 0;
-    margin: 0;
-    position: relative;
+    color: #fff;    
     display: flex;
+    font: caption;
     height: 100%;
-    width: 100%;
+    margin: 0;
     overflow: hidden;
+    position: relative;    
+    padding: 0;    
+    width: 100%;    
 }
 
 app-root {
@@ -25,6 +25,10 @@ title-bar {
     -webkit-app-region: drag;
 }
 
+title-bar .window-logo {
+    float:left;
+    padding: 10px;
+}
 title-bar .window-title {    
     float: left;
     font-size: 14px;
@@ -34,12 +38,21 @@ title-bar .window-title {
 title-bar .window-controls {
     float: right;
 }
-title-bar .window-btn {    
-    margin: 8px 8px 8px 0;
+title-bar .window-btn {
+    color: rgb(230, 226, 226);
+    padding: 11px 18px;
     -webkit-app-region: no-drag;
+    background: none;
+    border: none;
+    transition: background-color .3s;
 }
 
-.content {  
+title-bar .window-btn:active,
+title-bar .window-btn:focus { outline: none; }
+title-bar .window-btn:hover { background-color: rgba(128, 128, 128, .4); color: #fff; }
+title-bar .window-btn.close:hover { background-color: rgba(255, 0, 0, .8); }
+
+app-root > .content {  
     flex-grow: 1;
     overflow-y: auto;
     padding: 20px;

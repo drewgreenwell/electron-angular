@@ -3,10 +3,9 @@
            (onMaximize)="onMaximize()"
            (onClose)="onClose()"
            [title]="title"></title-bar>
+
 <div class="content">
-  <p>We are using node {{process.versions.node}},
-    Chrome {{process.versions.chrome}},
-    and Electron {{process.versions.electron}}.</p>
+  <electron-info></electron-info>
   <div style="text-align:center">
     <h1>
       Welcome to {{title}}!

@@ -24,7 +24,8 @@ function createWindow () {
         backgroundColor: '#000000',
         frame: false,
     })
-
+    //win.setMenuBarVisibility(false);
+    
     // and load the index.html of the app.
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'src/index.html'),
