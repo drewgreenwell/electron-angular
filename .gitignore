@@ -7,6 +7,8 @@
 /aot
 /src/*.js
 /src/*.map
+/src/**/*.js
+/src/**/*.map
 
 # dependencies
 /node_modules
