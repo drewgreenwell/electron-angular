@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
     ngOnInit() { }
 
     goToWelcome() {
-        this.router.navigate(['welcome']);
+        console.log('navigating to welcome');
+        this.router.navigateByUrl('welcome');
     }
 }

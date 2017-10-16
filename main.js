@@ -1,6 +1,7 @@
 const {app, BrowserWindow, protocol} = require('electron')
 const path = require('path')
 const url = require('url')
+const windowStateKeeper = require('electron-window-state');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -8,17 +9,23 @@ let win
 
 function createWindow () {
 
-    protocol.registerFileProtocol('local', (request, callback) => {
-        const url = request.url.substr(8)
-        callback({path: path.normalize(`${__dirname}/${url}`)})
-      }, (error) => {
-        if (error) console.error('Failed to register protocol')
-      })
-
+  protocol.registerFileProtocol('local', (request, callback) => {
+      const url = request.url.substr(8)
+      callback({path: path.normalize(`${__dirname}/${url}`)})
+    }, (error) => {
+      if (error) console.error('Failed to register protocol')
+    })
+  
+    let mainWindowState = windowStateKeeper({
+      defaultWidth: 1024,
+      defaultHeight: 768
+    });
     // Create the browser window.
     win = new BrowserWindow({
-        width: 1024,
-        height: 768,
+        x: mainWindowState.x,
+        y: mainWindowState.y,
+        width: mainWindowState.width,
+        height: mainWindowState.height,
         minWidth: 360,
         minHeight: 360,
         backgroundColor: '#000000',
@@ -26,6 +33,8 @@ function createWindow () {
     })
     //win.setMenuBarVisibility(false);
     
+    mainWindowState.manage(win);
+
     // and load the index.html of the app.
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'src/index.html'),
@@ -35,7 +44,8 @@ function createWindow () {
 
     // Open the DevTools.
     win.webContents.openDevTools()
-
+    require('devtron').install();
+    
     // Emitted when the window is closed.
     win.on('closed', () => {
         // Dereference the window object, usually you would store windows

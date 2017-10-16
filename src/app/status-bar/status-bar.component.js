@@ -8,24 +8,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent(router) {
-        this.router = router;
+var StatusBarComponent = /** @class */ (function () {
+    function StatusBarComponent() {
     }
-    DashboardComponent.prototype.ngOnInit = function () { };
-    DashboardComponent.prototype.goToWelcome = function () {
-        console.log('navigating to welcome');
-        this.router.navigateByUrl('welcome');
-    };
-    DashboardComponent = __decorate([
+    StatusBarComponent.prototype.ngOnInit = function () { };
+    StatusBarComponent = __decorate([
         Component({
-            selector: 'app-dashboard',
-            templateUrl: 'dashboard.component.html'
+            selector: 'app-status-bar',
+            templateUrl: './status-bar.component.html',
+            styleUrls: ['./status-bar.component.scss']
         }),
-        __metadata("design:paramtypes", [Router])
-    ], DashboardComponent);
-    return DashboardComponent;
+        __metadata("design:paramtypes", [])
+    ], StatusBarComponent);
+    return StatusBarComponent;
 }());
-export { DashboardComponent };
-//# sourceMappingURL=dashboard.component.js.map
+export { StatusBarComponent };
+//# sourceMappingURL=status-bar.component.js.map

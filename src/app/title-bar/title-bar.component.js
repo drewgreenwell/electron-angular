@@ -46,7 +46,7 @@ var TitleBarComponent = /** @class */ (function () {
     ], TitleBarComponent.prototype, "onClose", void 0);
     TitleBarComponent = __decorate([
         Component({
-            selector: 'title-bar',
+            selector: 'app-title-bar',
             templateUrl: './title-bar.component.html',
             styleUrls: ['./title-bar.component.css']
         })

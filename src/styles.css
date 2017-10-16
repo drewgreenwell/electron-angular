@@ -11,6 +11,12 @@ html, body {
     width: 100%;    
 }
 
+h1,.no-select {
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 app-root {
     display: flex;
     flex-direction: column;
@@ -18,27 +24,27 @@ app-root {
     width: 100%;
 }
 
-title-bar {    
+app-title-bar {    
     background-color: #2196f3;
     width: 100%;
     flex-shrink: 0;
     -webkit-app-region: drag;
 }
 
-title-bar .window-logo {
+app-title-bar .window-logo {
     float:left;
     padding: 10px;
 }
-title-bar .window-title {    
+app-title-bar .window-title {    
     float: left;
     font-size: 14px;
     padding: 10px;
     vertical-align: middle;
 }
-title-bar .window-controls {
+app-title-bar .window-controls {
     float: right;
 }
-title-bar .window-btn {
+app-title-bar .window-btn {
     color: rgb(230, 226, 226);
     padding: 11px 18px;
     -webkit-app-region: no-drag;
@@ -47,10 +53,10 @@ title-bar .window-btn {
     transition: background-color .1s;
 }
 
-title-bar .window-btn:active,
-title-bar .window-btn:focus { outline: none; }
-title-bar .window-btn:hover { background-color: rgba(128, 128, 128, .4); color: #fff; }
-title-bar .window-btn.close:hover { background-color: rgba(255, 0, 0, .8); }
+app-title-bar .window-btn:active,
+app-title-bar .window-btn:focus { outline: none; }
+app-title-bar .window-btn:hover { background-color: rgba(128, 128, 128, .4); color: #fff; }
+app-title-bar .window-btn.close:hover { background-color: rgba(255, 0, 0, .8); }
 
 app-root > .content {  
     flex-grow: 1;
@@ -58,6 +64,12 @@ app-root > .content {
     padding: 20px;
 }
 
+app-status-bar {
+    background-color: #2196f3;
+    width: 100%;
+    flex-shrink: 0;
+    height: 20px;
+}
 
 /* 
    Background animation 

@@ -1,10 +1,12 @@
-<title-bar #titleBar 
+<app-title-bar *ngIf="showTitleBar" #titleBar 
            (onMinimize)="onMinimize()"                      
            (onMaximize)="onMaximize()"
            (onClose)="onClose()"
-           [title]="title"></title-bar>
+           [title]="title"></app-title-bar>
 
 <div class="content">
   <electron-info></electron-info>
   <router-outlet></router-outlet> 
 </div>
+
+<app-status-bar *ngIf="showStatusBar" #statusBar></app-status-bar>

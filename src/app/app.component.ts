@@ -1,5 +1,6 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { TitleBarComponent } from './title-bar/title-bar.component';
+import { StatusBarComponent } from './status-bar/status-bar.component';
 import { ElectronService } from './services/electron.service';
 
 @Component({
@@ -10,8 +11,12 @@ import { ElectronService } from './services/electron.service';
 export class AppComponent implements OnInit {
 
   @ViewChild('titleBar') titleBar: TitleBarComponent;
+  @ViewChild('statusBar') statusBar: StatusBarComponent;
 
   title = 'Angular App in Electron';
+  showTitleBar = true;
+  showStatusBar = true;
+
   window: any;
 
   constructor(electronService: ElectronService) {

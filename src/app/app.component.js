@@ -9,10 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, ViewChild } from '@angular/core';
 import { TitleBarComponent } from './title-bar/title-bar.component';
+import { StatusBarComponent } from './status-bar/status-bar.component';
 import { ElectronService } from './services/electron.service';
 var AppComponent = /** @class */ (function () {
     function AppComponent(electronService) {
         this.title = 'Angular App in Electron';
+        this.showTitleBar = true;
+        this.showStatusBar = true;
         var electron = electronService.getElectron();
         this.window = electron.remote.getCurrentWindow();
     }
@@ -35,6 +38,10 @@ var AppComponent = /** @class */ (function () {
         ViewChild('titleBar'),
         __metadata("design:type", TitleBarComponent)
     ], AppComponent.prototype, "titleBar", void 0);
+    __decorate([
+        ViewChild('statusBar'),
+        __metadata("design:type", StatusBarComponent)
+    ], AppComponent.prototype, "statusBar", void 0);
     AppComponent = __decorate([
         Component({
             selector: 'app-root',
