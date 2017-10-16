@@ -9,12 +9,12 @@ let win
 
 function createWindow () {
 
-  protocol.registerFileProtocol('local', (request, callback) => {
-      const url = request.url.substr(8)
-      callback({path: path.normalize(`${__dirname}/${url}`)})
-    }, (error) => {
-      if (error) console.error('Failed to register protocol')
-    })
+  // protocol.registerFileProtocol('local', (request, callback) => {
+  //   const url = request.url.substr(8)
+  //   callback({path: path.normalize(`${__dirname}/${url}`)})
+  // }, (error) => {
+  //   if (error) console.error('Failed to register protocol')
+  // })
   
     let mainWindowState = windowStateKeeper({
       defaultWidth: 1024,
@@ -45,7 +45,7 @@ function createWindow () {
     // Open the DevTools.
     win.webContents.openDevTools()
     require('devtron').install();
-    
+
     // Emitted when the window is closed.
     win.on('closed', () => {
         // Dereference the window object, usually you would store windows
