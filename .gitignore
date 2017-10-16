@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 /aot
+/src/*.js
+/src/*.map
 
 # dependencies
 /node_modules
