@@ -17,6 +17,8 @@ h1,.no-select {
     user-select: none;
 }
 
+.link, .link:hover { text-decoration: underline; }
+
 app-root {
     display: flex;
     flex-direction: column;
