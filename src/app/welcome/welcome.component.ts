@@ -1,9 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-welcome',
-    templateUrl: 'welcome.component.html'
+    templateUrl: 'welcome.component.html',
+    styleUrls: ['./welcome.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 
 export class WelcomeComponent implements OnInit {

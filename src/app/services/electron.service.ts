@@ -4,12 +4,20 @@ declare const window: any;
 
 @Injectable()
 export class ElectronService {
-    public electron = window.require('electron');
+    public electron;
     public remote;
     public app;
 
     constructor() {
-        this.remote = this.electron.remote;
-        this.app = this.electron.app;
+        if ( window.require ) {
+            this.electron = window.require('electron');
+            this.remote = this.electron.remote;
+            this.app = this.electron.app;
+        } else {
+            // running in browser
+            this.electron = {};
+            this.remote = { getCurrentWindow: () => window, process: { versions: {} } };
+            this.app = {};
+        }
      }
 }

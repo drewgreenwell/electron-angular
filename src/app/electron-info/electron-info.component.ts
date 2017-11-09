@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { ElectronService } from '../services/electron.service';
 
 @Component({
   selector: 'electron-info',
   templateUrl: './electron-info.component.html',
-  styleUrls: ['./electron-info.component.css']
+  styleUrls: ['./electron-info.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ElectronInfoComponent {
     process: any;

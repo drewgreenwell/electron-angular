@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { remote } from 'electron';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-title-bar',
   templateUrl: './title-bar.component.html',
-  styleUrls: ['./title-bar.component.css']
+  styleUrls: ['./title-bar.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class TitleBarComponent {
     @Input() title: string;

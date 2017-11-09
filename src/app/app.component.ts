@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 import { ElectronService } from './services/electron.service';
@@ -6,7 +6,8 @@ import { ElectronService } from './services/electron.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
 
