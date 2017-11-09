@@ -20,8 +20,7 @@ export class AppComponent implements OnInit {
   window: any;
 
   constructor(electronService: ElectronService) {
-    const electron = electronService.getElectron();
-    this.window = electron.remote.getCurrentWindow();
+    this.window = electronService.remote.getCurrentWindow();
   }
 
   ngOnInit() {}

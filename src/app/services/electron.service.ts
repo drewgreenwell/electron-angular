@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
+declare const window: any;
+// import { app, remote } from 'electron';
 
 @Injectable()
 export class ElectronService {
+    public electron = window.require('electron');
+    public remote;
+    public app;
 
-    private electron: any = null;
-
-    getElectron() {
-        if (this.electron === null) {
-            this.electron = require('electron');
-        }
-        return this.electron;
-    }
-
-    constructor() { }
+    constructor() {
+        this.remote = this.electron.remote;
+        this.app = this.electron.app;
+     }
 }

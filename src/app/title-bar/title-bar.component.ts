@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-const remote = require('electron').remote;
+import { remote } from 'electron';
 
 @Component({
   selector: 'app-title-bar',

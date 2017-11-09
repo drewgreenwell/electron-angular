@@ -10,7 +10,6 @@ export class ElectronInfoComponent {
     process: any;
 
     constructor(electronService: ElectronService) {
-      const electron = electronService.getElectron();
-      this.process = electron.remote.process;
+      this.process = electronService.remote.process;
     }
 }
