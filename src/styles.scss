@@ -19,19 +19,6 @@ h1,.no-select {
 
 .link, .link:hover { text-decoration: underline; }
 
-app-root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-app-root > .content {  
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 20px;
-}
-
 /* 
    Background animation 
    https://codepen.io/asfarmed/pen/cfslr?page=1&

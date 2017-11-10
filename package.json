@@ -26,8 +26,7 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
-    "core-js": "^2.4.1",
-    "electron": "1.7.8",
+    "core-js": "^2.4.1",    
     "electron-window-state": "^4.1.1",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
@@ -41,6 +40,7 @@
     "@types/node": "^8.0.50",
     "codelyzer": "^4.0.1",
     "devtron": "^1.4.0",
+    "electron": "1.7.9",
     "electron-download": "^4.1.0",
     "electron-packager": "^9.1.0",
     "jasmine-core": "^2.8.0",

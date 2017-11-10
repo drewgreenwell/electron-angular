@@ -35,6 +35,21 @@ function createWindow () {
     
     mainWindowState.manage(win);
 
+    win.webContents.on('crashed', function (event) {
+      console.error('Crashed!', event);
+      alert ('The webContents have crashed! ' + event);
+    });
+
+    win.on('unresponsive', function (event) {
+      console.error('Unresponsive!', event);
+      alert ('The webContents are unresponsive! ' + event);
+    });
+
+    process.on('uncaughtException', function (event) {
+      console.error('Uncaught Exception!', event);
+      alert ('Uncaught Exception! ' + event);
+    });
+
     // and load the index.html of the app.
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'dist/index.html'),
@@ -44,6 +59,7 @@ function createWindow () {
 
     // Open the DevTools.
     win.webContents.openDevTools()
+
     require('devtron').install();
 
     // Emitted when the window is closed.
