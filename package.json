@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --env=prod",
+    "build": "ng build --prod --env=prod && node copy-files-for-packaging.js",
     "electron": "electron .",
     "package": "electron-packager ./dist/ electron-angular --icon=img/icon --platform=all --arch=all --version=0.36.0 --out=./packaged/ --asar --electronVersion=1.7.9",
     "refresh": "npm run build:aot && npm run electron",
@@ -50,6 +50,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-fs-extra": "^0.8.2",
     "node-sass": "^4.6.1",
     "protractor": "^5.2.0",
     "rollup-plugin-commonjs": "^8.2.6",
