@@ -9,7 +9,7 @@
     "build": "ng build --prod --env=prod && node copy-files-for-packaging.js",
     "electron": "electron .",
     "package": "electron-packager ./dist/ electron-angular --icon=img/icon --platform=all --arch=all --version=0.36.0 --out=./packaged/ --asar --electronVersion=1.7.9",
-    "refresh": "npm run build:aot && npm run electron",
+    "refresh": "npm run build && npm run electron",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
