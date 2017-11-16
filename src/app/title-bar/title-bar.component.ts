@@ -9,9 +9,9 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
 export class TitleBarComponent {
     @Input() title: string;
     @Input() logo: string;
-    @Output() onMaximize = new EventEmitter();
-    @Output() onMinimize = new EventEmitter();
-    @Output() onClose = new EventEmitter();
+    @Output() onMaximize = new EventEmitter<void>();
+    @Output() onMinimize = new EventEmitter<void>();
+    @Output() onClose = new EventEmitter<void>();
 
     minimize($event: any) {
         this.onMinimize.emit();
