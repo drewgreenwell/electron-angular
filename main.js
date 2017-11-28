@@ -9,12 +9,6 @@ let win
 
 function createWindow () {
 
-  // protocol.registerFileProtocol('local', (request, callback) => {
-  //   const url = request.url.substr(8)
-  //   callback({path: path.normalize(`${__dirname}/${url}`)})
-  // }, (error) => {
-  //   if (error) console.error('Failed to register protocol')
-  // })
   
     let mainWindowState = windowStateKeeper({
       defaultWidth: 1024,
@@ -68,6 +62,18 @@ function createWindow () {
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
         win = null
+    })
+
+
+    const {ipcMain} = require('electron')
+    ipcMain.on('asynchronous-message', (event, arg) => {
+      console.log(arg)
+      event.sender.send('asynchronous-reply', 'pong')
+    })
+    
+    ipcMain.on('synchronous-message', (event, arg) => {
+      console.log(arg)
+      event.returnValue = 'pong'
     })
 }
 

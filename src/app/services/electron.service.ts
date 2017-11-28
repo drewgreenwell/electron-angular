@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ElectronMock } from '../../mocks/electron.mock';
 declare const window: any;
 // import { app, remote } from 'electron';
 
@@ -16,7 +17,7 @@ export class ElectronService {
         } else {
             // running in browser
             this.electron = {};
-            this.remote = { getCurrentWindow: () => window, process: { versions: {} } };
+            this.remote = new ElectronMock();
             this.app = {};
         }
      }

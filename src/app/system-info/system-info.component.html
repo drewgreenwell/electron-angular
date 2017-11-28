@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-block">
+        <h3 class="card-title">CPU</h3>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                role="progressbar"
+                [attr.aria-valuenow]="percentCPUUsage"
+                [attr.aria-valuemin]="0"
+                [attr.aria-valuemax]="100"
+                [ngStyle]="{'width': percentCPUUsage + '%'}">
+                {{percentCPUUsage}}%
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-block">
+        <h3 class="card-title">System Memory</h3>
+        <dl>
+            <dt>Total Memory:</dt>
+            <dd>{{ memory.total }}MB</dd>
+            <dt>Free Memory:</dt>    
+            <dd>{{ memory.free }}MB</dd>
+            <dt>Used Memory:</dt>
+            <dd>{{ memory.used }}MB</dd>
+        </dl>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+                role="progressbar"
+                [attr.aria-valuenow]="memoryUsage"
+                [attr.aria-valuemin]="0"
+                [attr.aria-valuemax]="100"
+                [ngStyle]="{'width': memoryUsage + '%'}">
+                {{memoryUsage}}%
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-block">
+        <h3 class="card-title">Process Memory</h3>
+        <dl>
+            <dt>Working Set:</dt>
+            <dd>{{ pmemory.workingSetSize }}MB</dd>
+            <dt>Peak Working Set:</dt>    
+            <dd>{{ pmemory.peakWorkingSetSize }}MB</dd>
+            <dt>Private Memory:</dt>
+            <dd>{{ pmemory.privateBytes }}MB</dd>
+            <dt>Shared Memory:</dt>
+            <dd>{{ pmemory.sharedBytes }}MB</dd>
+        </dl>
+    </div>
+</div>

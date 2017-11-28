@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 import { ElectronInfoComponent } from './electron-info/electron-info.component';
+import { SystemInfoComponent } from './system-info/system-info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
@@ -17,6 +18,7 @@ import { ElectronService } from './services/electron.service';
     TitleBarComponent,
     StatusBarComponent,
     ElectronInfoComponent,
+    SystemInfoComponent,
     DashboardComponent,
     WelcomeComponent
   ],

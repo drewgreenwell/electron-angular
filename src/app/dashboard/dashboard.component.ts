@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 @Component({
     selector: 'app-dashboard',
@@ -8,13 +9,13 @@ import { Router } from '@angular/router';
     encapsulation: ViewEncapsulation.None,
 })
 
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
+
     constructor(public router: Router) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+    }
 
-    goToWelcome() {
-        console.log('navigating to welcome');
-        this.router.navigateByUrl('welcome');
+    ngOnDestroy() {
     }
 }

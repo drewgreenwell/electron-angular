@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
 import { ElectronService } from '../services/electron.service';
 
 @Component({
-  selector: 'electron-info',
+  selector: 'app-electron-info',
   templateUrl: './electron-info.component.html',
   styleUrls: ['./electron-info.component.scss'],
   encapsulation: ViewEncapsulation.None
