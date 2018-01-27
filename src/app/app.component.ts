@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   @ViewChild('statusBar') statusBar: StatusBarComponent;
 
   title = 'Angular App in Electron';
-  showTitleBar = true;
+  showTitleBar = false;
   showStatusBar = true;
 
   window: any;

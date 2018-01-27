@@ -5,9 +5,8 @@
     class="bg-primary"
     [title]="title"></app-title-bar>
 
-<div class="content">
-  <app-electron-info></app-electron-info>
+<div class="content container-fluid">
   <router-outlet></router-outlet> 
 </div>
 
-<app-status-bar class="bg-primary" *ngIf="showStatusBar" #statusBar></app-status-bar>
+<app-status-bar class="bg-primary container-fluid" *ngIf="showStatusBar" #statusBar></app-status-bar>

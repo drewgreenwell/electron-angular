@@ -10,6 +10,7 @@
     "electron": "electron .",
     "package": "electron-packager ./dist/ electron-angular --icon=img/icon --platform=all --arch=all --version=0.36.0 --out=./packaged/ --asar --electronVersion=1.7.9",
     "refresh": "npm run build && npm run electron",
+    "erefresh": "node copy-files-for-packaging.js && npm run electron",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -28,6 +29,8 @@
     "core-js": "^2.4.1",
     "electron-window-state": "^4.1.1",
     "font-awesome": "^4.7.0",
+    "moment": "^2.20.1",
+    "ngx-charts": "^3.0.2",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },
@@ -39,8 +42,9 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "^8.0.53",
     "codelyzer": "^4.0.1",
+    "d3": "^4.4.0",
     "devtron": "^1.4.0",
-    "electron": "1.7.9",
+    "electron": "1.7.11",
     "electron-download": "^4.1.0",
     "electron-packager": "^10.1.0",
     "handlebars": "^4.0.11",

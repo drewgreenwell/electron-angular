@@ -13,7 +13,7 @@ html, body {
 h1,.no-select {
     cursor: default;
     -webkit-user-select: none;
-    user-select: none;
+	user-select: none;	
 }
 
 .link, .link:hover { text-decoration: underline; }

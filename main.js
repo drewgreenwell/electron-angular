@@ -23,9 +23,9 @@ function createWindow () {
         minWidth: 360,
         minHeight: 360,
         backgroundColor: '#000000',
-        frame: false,
+        frame: true,
     })
-    //win.setMenuBarVisibility(false);
+    win.setMenuBarVisibility(false);
     
     mainWindowState.manage(win);
 
